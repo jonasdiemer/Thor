@@ -449,6 +449,24 @@
                                     <action selector="toggleEnableDeactivateKey:" target="LfM-H7-njo" id="5Rn-lR-zu6"/>
                                 </connections>
                             </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="5cR-wB-nPp">
+                                <rect key="frame" x="45" y="112" width="293" height="18"/>
+                                <buttonCell key="cell" type="check" title="Cycle through windows" bezelStyle="regularSquare" imagePosition="left" state="off" inset="2" id="l3c-7P-tRs">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" size="13" name="STHeitiSC-Light"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="toggleCycleWindowsEnabled:" target="LfM-H7-njo" id="sPg-kD-5Xn"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cHn-dL-Kpo">
+                                <rect key="frame" x="65" y="93" width="254" height="15"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Toggles between app windows on subsequent presses" id="bGx-5P-NzM">
+                                    <font key="font" metaFont="miniSystem"/>
+                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="d3U-w9-jNg">
                                 <rect key="frame" x="45" y="336" width="192" height="18"/>
                                 <buttonCell key="cell" type="check" title="Show Thor in the menu bar" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="LbD-19-0Ga">
@@ -511,12 +529,20 @@
                             <constraint firstAttribute="bottom" secondItem="prA-Il-0qM" secondAttribute="bottom" constant="20" symbolic="YES" id="taQ-Tf-jfr"/>
                             <constraint firstItem="ySw-Wg-Pgf" firstAttribute="trailing" secondItem="9pw-DH-pgZ" secondAttribute="trailing" id="uVo-Rg-JBi"/>
                             <constraint firstItem="0zk-yi-rDJ" firstAttribute="leading" secondItem="cIc-ga-45L" secondAttribute="trailing" constant="6" id="vtd-KI-5AV"/>
+                            <constraint firstItem="5cR-wB-nPp" firstAttribute="top" secondItem="hWC-9z-cv3" secondAttribute="bottom" constant="10" id="xBv-Ha-eFR"/>
+                            <constraint firstItem="5cR-wB-nPp" firstAttribute="leading" secondItem="Dtr-0d-C8U" secondAttribute="leading" id="ygF-Lf-bPc"/>
+                            <constraint firstAttribute="trailing" secondItem="5cR-wB-nPp" secondAttribute="trailing" constant="28" id="zCk-zB-XYL"/>
+                            <constraint firstItem="cHn-dL-Kpo" firstAttribute="leading" secondItem="5cR-wB-nPp" secondAttribute="leading" constant="20" id="1aR-SY-bFH"/>
+                            <constraint firstItem="cHn-dL-Kpo" firstAttribute="trailing" secondItem="5cR-wB-nPp" secondAttribute="trailing" constant="-20" id="2cN-5T-fJY"/>
+                            <constraint firstItem="cHn-dL-Kpo" firstAttribute="top" secondItem="5cR-wB-nPp" secondAttribute="bottom" constant="5" id="3dM-gF-hjR"/>
+                            <constraint firstItem="prA-Il-0qM" firstAttribute="top" secondItem="cHn-dL-Kpo" secondAttribute="bottom" constant="50" id="4eN-Hf-iKx"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="btnEnableDeactivateKey" destination="ych-hK-1qT" id="wjv-C6-I04"/>
                         <outlet property="btnEnableMenuBarIcon" destination="d3U-w9-jNg" id="VhB-4g-cwa"/>
                         <outlet property="btnEnableMenuBarIconShowHideKey" destination="Lcx-bw-woE" id="ZxA-zv-c8A"/>
+                        <outlet property="btnCycleWindowsEnabled" destination="5cR-wB-nPp" id="SkN-s4-Kc7"/>
                         <outlet property="btnEnableShortcut" destination="7sy-3X-TvI" id="qGM-kS-fk6"/>
                         <outlet property="btnLaunchAtLogin" destination="XJy-eX-prE" id="xKD-J0-ALg"/>
                         <outlet property="btnShortcutDeactivateKey" destination="0zk-yi-rDJ" id="OzF-KE-TX0"/>
