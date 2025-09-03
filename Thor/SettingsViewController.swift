@@ -8,6 +8,7 @@
 
 import Cocoa
 import LaunchAtLogin
+import ApplicationServices
 
 class SettingsViewController: NSViewController {
 
@@ -119,6 +120,9 @@ class SettingsViewController: NSViewController {
     @IBAction func toggleCycleWindowsEnabled(_ sender: Any) {
         let enable = btnCycleWindowsEnabled.state == .on
         defaults[.cycleWindowsEnabled] = enable
-    }
 
+        if enable {
+            AccessibilityUtils.checkAccessibilityPermissions()
+        }
+    }
 }

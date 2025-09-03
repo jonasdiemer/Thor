@@ -10,6 +10,7 @@ import Carbon.HIToolbox
 import Cocoa
 import Foundation
 import MASShortcut
+import ApplicationServices
 
 struct ShortcutMonitor {
     // Dictionary to track application visibility state
@@ -29,17 +30,22 @@ struct ShortcutMonitor {
                         frontmostAppIdentifier == targetAppIdentifier {
                         // If cycle windows feature is enabled, use Cmd+Tilde to cycle windows
                         if defaults[.cycleWindowsEnabled] {
-                            let source = CGEventSource(stateID: .hidSystemState)
-                            let keyGrave = CGKeyCode(kVK_ANSI_Grave)  // Key code for `~` on US keyboards
-                            let keyDown = CGEvent(
-                                keyboardEventSource: source, virtualKey: keyGrave, keyDown: true)
-                            keyDown?.flags = .maskCommand
-                            let keyUp = CGEvent(
-                                keyboardEventSource: source, virtualKey: keyGrave, keyDown: false)
-                            keyUp?.flags = .maskCommand
+                            // Check if accessibility permissions are granted
+                            if AccessibilityUtils.checkAccessibilityPermissions(shouldPromptIfNeeded: false) {
+                                let source = CGEventSource(stateID: .hidSystemState)
+                                let keyGrave = CGKeyCode(kVK_ANSI_Grave)  // Key code for `~` on US keyboards
+                                let keyDown = CGEvent(
+                                    keyboardEventSource: source, virtualKey: keyGrave, keyDown: true)
+                                keyDown?.flags = .maskCommand
+                                let keyUp = CGEvent(
+                                    keyboardEventSource: source, virtualKey: keyGrave, keyDown: false)
+                                keyUp?.flags = .maskCommand
 
-                            keyDown?.post(tap: .cghidEventTap)
-                            keyUp?.post(tap: .cghidEventTap)
+                                keyDown?.post(tap: .cghidEventTap)
+                                keyUp?.post(tap: .cghidEventTap)
+                            } else {
+                                AccessibilityUtils.checkAccessibilityPermissions()
+                            }
                         } else {
                             // Use the old hide/unhide behavior
                             if let runningApp = NSRunningApplication.runningApplications(
@@ -81,5 +87,4 @@ struct ShortcutMonitor {
         // Clear app visibility state when unregistering
         appVisibilityState.removeAll()
     }
-
 }
