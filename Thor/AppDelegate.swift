@@ -34,7 +34,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             DefaultsKeys.EnableShortcut.key: true,
             DefaultsKeys.enableMenuBarIcon.key: true,
             DefaultsKeys.enableMenuBarIconShowHideKey.key: true,
-            DefaultsKeys.cycleWindowsEnabled.key: false,
+            DefaultsKeys.cycleWindowsEnabled.key: false
             ])
 
         NSApp.setActivationPolicy(.accessory)

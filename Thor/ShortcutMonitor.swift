@@ -26,8 +26,7 @@ struct ShortcutMonitor {
                     if let frontmostAppIdentifier = NSWorkspace.shared.frontmostApplication?
                         .bundleIdentifier,
                         let targetAppIdentifier = Bundle(url: app.appBundleURL)?.bundleIdentifier,
-                        frontmostAppIdentifier == targetAppIdentifier
-                    {
+                        frontmostAppIdentifier == targetAppIdentifier {
                         // If cycle windows feature is enabled, use Cmd+Tilde to cycle windows
                         if defaults[.cycleWindowsEnabled] {
                             let source = CGEventSource(stateID: .hidSystemState)
