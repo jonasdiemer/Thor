@@ -331,12 +331,12 @@
             <objects>
                 <customObject id="0cR-1e-8gt" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="SettingsViewController" id="LfM-H7-njo" customClass="SettingsViewController" customModule="Thor" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" misplaced="YES" id="Crp-4s-mEo">
-                        <rect key="frame" x="0.0" y="0.0" width="366" height="487"/>
+                    <view key="view" id="Crp-4s-mEo">
+                        <rect key="frame" x="0.0" y="0.0" width="366" height="505"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="XJy-eX-prE">
-                                <rect key="frame" x="45" y="441" width="153" height="18"/>
+                                <rect key="frame" x="45" y="459" width="153" height="18"/>
                                 <buttonCell key="cell" type="check" title="Launch Thor at login" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Uwv-xu-Spi">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" size="13" name="STHeitiSC-Light"/>
@@ -349,7 +349,7 @@
                                 </connections>
                             </button>
                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="751" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dtr-0d-C8U">
-                                <rect key="frame" x="45" y="161" width="104" height="16"/>
+                                <rect key="frame" x="45" y="179" width="104" height="16"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Reactivate after:" id="1fT-Qh-dE2">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -357,7 +357,7 @@
                                 </textFieldCell>
                             </textField>
                             <slider verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ySw-Wg-Pgf">
-                                <rect key="frame" x="151" y="146" width="172" height="29"/>
+                                <rect key="frame" x="151" y="164" width="172" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="HaR-z1-X7a"/>
                                 </constraints>
@@ -368,7 +368,7 @@
                                 </sliderCell>
                             </slider>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="7sy-3X-TvI">
-                                <rect key="frame" x="45" y="392" width="124" height="18"/>
+                                <rect key="frame" x="45" y="410" width="124" height="18"/>
                                 <buttonCell key="cell" type="check" title="Enable shortcut" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="fya-Hu-agS">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" size="13" name="STHeitiSC-Light"/>
@@ -391,7 +391,7 @@
                                 </connections>
                             </button>
                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cIc-ga-45L">
-                                <rect key="frame" x="45" y="190" width="99" height="16"/>
+                                <rect key="frame" x="45" y="208" width="99" height="16"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Deactivate Key:" id="uWp-Ys-dhU">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -399,7 +399,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hWC-9z-cv3">
-                                <rect key="frame" x="151" y="142" width="32" height="16"/>
+                                <rect key="frame" x="151" y="160" width="32" height="16"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0.1s" id="RmK-si-Zsx">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -407,7 +407,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9pw-DH-pgZ">
-                                <rect key="frame" x="302" y="140" width="21" height="16"/>
+                                <rect key="frame" x="302" y="158" width="21" height="16"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="1s" id="UpG-OL-d8P">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -415,7 +415,7 @@
                                 </textFieldCell>
                             </textField>
                             <popUpButton verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0zk-yi-rDJ" userLabel="⌘ Command Key">
-                                <rect key="frame" x="145" y="190" width="173" height="25"/>
+                                <rect key="frame" x="145" y="208" width="173" height="25"/>
                                 <popUpButtonCell key="cell" type="push" title="⇧ Shift Key" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="qJu-sX-5Pd" id="2rr-yT-VNc" userLabel="⌃ Control Key">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="message"/>
@@ -440,7 +440,7 @@
                                 </connections>
                             </popUpButton>
                             <button ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ych-hK-1qT">
-                                <rect key="frame" x="45" y="231" width="293" height="18"/>
+                                <rect key="frame" x="45" y="249" width="293" height="18"/>
                                 <buttonCell key="cell" type="check" title="Enable double tap to deactivate shortcuts" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="ntn-c3-HAA">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" size="13" name="STHeitiSC-Light"/>
@@ -450,7 +450,7 @@
                                 </connections>
                             </button>
                             <button ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5cR-wB-nPp">
-                                <rect key="frame" x="45" y="119" width="293" height="18"/>
+                                <rect key="frame" x="45" y="137" width="293" height="18"/>
                                 <buttonCell key="cell" type="check" title="Cycle through windows" bezelStyle="regularSquare" imagePosition="left" inset="2" id="l3c-7P-tRs">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" size="13" name="STHeitiSC-Light"/>
@@ -460,15 +460,15 @@
                                 </connections>
                             </button>
                             <textField focusRingType="none" horizontalHuggingPriority="750" horizontalCompressionResistancePriority="250" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cHn-dL-Kpo">
-                                <rect key="frame" x="65" y="77" width="255" height="31"/>
-                                <textFieldCell key="cell" alignment="left" title="Toggles between app windows on subsequent presses asjdhaskjd asdojhaskjdh asldkjlkasjdl" id="bGx-5P-NzM">
+                                <rect key="frame" x="65" y="84" width="255" height="42"/>
+                                <textFieldCell key="cell" alignment="left" title="When enabled, toggles between app windows on subsequent presses instead of hiding the app. Requires Accessibility permissions." id="bGx-5P-NzM">
                                     <font key="font" metaFont="miniSystem"/>
                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="d3U-w9-jNg">
-                                <rect key="frame" x="45" y="343" width="192" height="18"/>
+                                <rect key="frame" x="45" y="361" width="192" height="18"/>
                                 <buttonCell key="cell" type="check" title="Show Thor in the menu bar" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="LbD-19-0Ga">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" size="13" name="STHeitiSC-Light"/>
@@ -481,7 +481,7 @@
                                 </connections>
                             </button>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="Lcx-bw-woE" userLabel="Btn Enable Menu Bar Icon Show/Hide Key">
-                                <rect key="frame" x="45" y="280" width="292" height="32"/>
+                                <rect key="frame" x="45" y="298" width="292" height="32"/>
                                 <buttonCell key="cell" type="check" title="Enable ⇧⌃⌥ ⌘ + T to show/hide Thor in the menu bar" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="kOR-Gg-12E" userLabel="Enable ⇧⌃⌥ ⌘ + T to show/hide Thor in the menu bar">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" size="13" name="STHeitiSC-Light"/>
@@ -551,7 +551,7 @@
                 </viewController>
                 <userDefaultsController representsSharedInstance="YES" id="XlP-8s-PZm"/>
             </objects>
-            <point key="canvasLocation" x="1545" y="416"/>
+            <point key="canvasLocation" x="1545" y="424.5"/>
         </scene>
     </scenes>
     <resources>
