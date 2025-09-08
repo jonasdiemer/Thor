@@ -13,9 +13,6 @@ import MASShortcut
 import ApplicationServices
 
 struct ShortcutMonitor {
-    // Dictionary to track application visibility state
-    private static var appVisibilityState: [String: Bool] = [:]
-
     /// Cycles through windows of an application using Cmd+Tilde keystroke
     private static func cycleWindowsForApp() {
         // Check if accessibility permissions are granted
@@ -99,7 +96,5 @@ struct ShortcutMonitor {
         for app in apps where app.shortcut != nil {
             MASShortcutMonitor.shared().unregisterShortcut(app.shortcut)
         }
-        // Clear app visibility state when unregistering
-        appVisibilityState.removeAll()
     }
 }
